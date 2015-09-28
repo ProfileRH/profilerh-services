@@ -1,0 +1,59 @@
+name: profilerh-service
+version: 0.0.1
+description: SaaS solution for RH management
+dependencies:
+# Common
+  http: "^0.11.3"
+  logging: any
+  uri: "^0.10.0"
+  args: "^0.13.2"
+  di: "^3.3.4"
+  crypto: '>=0.9.0 <0.10.0'
+  cipher: "^0.7.1"
+  intl: "^0.12.4+2"
+  
+# Serveur
+  kong_api: "^0.1.0"
+  amqp_rpc_binder: "^0.1.0"
+  rpc_mongo_mapper:
+    git:
+      url: https://github.com/ProfileRH/rpc_mongo_mapper.git
+  shelf: "^0.6.2"
+  shelf_static: "^0.2.3"
+  shelf_proxy: "^0.1.0+2"
+  shelf_cors: "^0.2.1"
+  dart_amqp: "^0.0.1"
+  uuid: "^0.5.0"
+  rpc:
+    git:
+      url: https://github.com/platelk/rpc.git
+  mongo_dart:
+    git:
+      url: https://github.com/vadimtsushko/mongo_dart
+  redstone:
+    git:
+      url: https://github.com/redstone-dart/redstone.git
+      ref: v0.5
+dev_dependencies:
+  test: "^0.12.4+3"
+  unittest: '>=0.10.0 <0.12.0'
+  grinder: "^0.7.2"
+  dartdoc: "^0.4.0"
+  bwu_docker: "^0.2.1"
+dependency_overrides:
+  logging: '^0.11.1+1'
+  shelf: "^0.6.2"
+  grinder: "^0.7.2"
+  uri:
+    git:
+      url: https://github.com/google/uri.dart.git
+  di:
+    git:
+      url: https://github.com/angular/di.dart.git
+  analyzer: "^0.25.0"
+  rpc:
+    git:
+      url: https://github.com/platelk/rpc.git
+  mongo_dart:
+    git:
+      url: https://github.com/vadimtsushko/mongo_dart

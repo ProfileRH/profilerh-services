@@ -1,0 +1,16 @@
+{
+  "external_ip": "192.168.251.222",
+  "local_ip": "127.0.0.1",
+  "docker_daemon_ip": "192.168.182.131",
+  "user_service_default_port": "8080",
+  "company_service_default_port": "8081",
+  "job_service_default_port": "8082",
+  "auth_service_default_port": "8083",
+  "inscription_service_default_port": "8084",
+  "project_service_default_port": "8085",
+  "web_app_default_port": "4242",
+  "rabbitmq_host": "192.168.182.131",
+  "rabbitmq_port": "5672",
+  "pub_serve_port": "54184",
+  "api_url": "127.0.0.1"
+}

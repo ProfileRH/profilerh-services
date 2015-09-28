@@ -1,0 +1,133 @@
+[
+  {
+    "name": "etcd",
+    "type": "key-storage",
+    "localisation": 
+	[
+	  {"host": "127.0.0.1", "port": "2379"}
+	]
+  },
+  {
+    "name": "kong",
+    "type": "api-gateway",
+    "localisation":
+    {
+      "public" : ["http://${docker_daemon_ip}:8000/"],
+      "admin" : ["http://${docker_daemon_ip}:8001/"]
+    }
+  },
+  {
+    "name": "mongodb",
+    "type": "storage",
+    "localisation":
+	[
+      "mongodb://${local_ip}/profilerh"
+	]
+  },
+  {
+    "name": "rabbitmq",
+    "type": "messaging",
+    "localisation": [
+      "${docker_daemon_ip}"
+    ]
+  },
+  {
+    "name": "user",
+    "type": "service",
+    "defaultPort": "${user_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${user_service_default_port}"
+    ]
+  },
+  {
+    "name": "company",
+    "type": "service",
+    "defaultPort": "${company_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${company_service_default_port}"
+    ]
+  },
+  {
+    "name": "job",
+    "type": "service",
+    "defaultPort": "${job_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${job_service_default_port}"
+    ]
+  },
+  {
+    "name": "auth",
+    "type": "service",
+    "defaultPort": "${auth_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${auth_service_default_port}"
+    ]
+  },
+  {
+    "name": "file",
+    "type": "service",
+    "uploadDir": "upload/",
+    "defaultPort": "${file_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${file_service_default_port}"
+    ]
+  },
+  {
+    "name": "inscription",
+    "type": "service",
+    "defaultPort": "${inscription_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${inscription_service_default_port}"
+    ]
+  },
+  {
+    "name": "project",
+    "type": "service",
+    "defaultPort": "${project_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${project_service_default_port}"
+    ]
+  },
+  {
+    "name": "timesheet",
+    "type": "service",
+    "defaultPort": "${timesheet_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${timesheet_service_default_port}"
+    ]
+  },
+  {
+    "name": "organization",
+    "type": "service",
+    "defaultPort": "${organization_service_default_port}",
+    "localisation":
+    [
+      "http://${external_ip}:${organization_service_default_port}"
+    ]
+  },
+  {
+    "name": "api",
+    "type": "api-entry-point",
+    "localisation": "http://${api_url}/api"
+  },
+  {
+    "name": "web-app",
+    "type": "web-app",
+    "baseDir": "web/",
+    "publicDir": "web/app",
+    "buildDir": "build/",
+    "index": "web/index.html",
+    "mode": "dev",
+    "defaultPort": "${web_app_default_port}",
+    "pub_serve": "http://${local_ip}:${pub_serve_port}",
+    "pub_serve_port": "${pub_serve_port}"
+  }
+]
