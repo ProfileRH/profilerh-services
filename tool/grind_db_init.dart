@@ -1,6 +1,6 @@
 import 'package:grinder/grinder.dart';
-import "package:ProfileRH/common.dart";
-import 'package:ProfileRH/profile_service.dart';
+import "package:profilerh_common/profilerh_common.dart";
+import 'package:profilerh_service/profile_service.dart';
 import 'package:mongo_dart/mongo_dart.dart';
 
 addingUser() async {

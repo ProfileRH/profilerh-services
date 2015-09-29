@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:grinder/grinder.dart';
 import 'grind_service_cmd.dart';
 import 'grind_db_init.dart';
-import 'package:ProfileRH/profile_service.dart';
+import 'package:profilerh_service/profile_service.dart';
 
 main(args) => grind(args);
 
